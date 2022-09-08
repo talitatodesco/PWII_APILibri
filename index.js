@@ -7,13 +7,6 @@ ATRAVÉS DA CONSTANTE app
 */
 const app = express();
 
-/** ROTAS DE CRUD DE CATEGORIA **/
-
-//ROTA DE CADASTRO DE CATEGORIA
-
-
-//Nome (P1, P2, P3, P4){}
-
 // função = primeiro string, segunda é uma arrow function
 app.use('/', categoria);
 
@@ -34,5 +27,5 @@ PARAMETROS DO listem
 2 - CALLBACK (OPCIONAL)
 */
 app.listen(3000, ()=>{
-    console.log('SERVIDOR RODANDO!');
+    console.log('SERVIDOR RODANDO!- http://localhost:3000');
 });
