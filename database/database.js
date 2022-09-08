@@ -1,7 +1,6 @@
 //IMPORTAÇÃO DO PACOTE SEQUELIZE
 
 const Sequelize = require ('sequelize');
-const { default: ModelManager } = require('sequelize/types/model-manager');
 
 /*****CRIA A CONEXÃO COM O BANCO DE DADOS*****/ 
 
