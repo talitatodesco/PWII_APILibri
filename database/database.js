@@ -26,4 +26,4 @@ const connection = new Sequelize(
                     timezone: '-03:00'
                 });
                 
-module.exports = connection
+module.exports = connection;
