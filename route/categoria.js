@@ -29,4 +29,4 @@ router.delete('/excluirCategoria', (req, res)=>{
     res.send('ROTA DE EXCLUSÃO DE CATEGORIA!');
 });
 
-module.exports = categoria;
+module.exports = modelCategoria;
