@@ -9,8 +9,19 @@ const router = express.Router();
 /** ROTAS DE CRUD DE CATEGORIA **/
 //ROTA DE CADASTRO DE CATEGORIA
 //NOME(P1, P2, P3, P4){}
+
 router.post('/cadastrarCategoria', (req, res)=>{
-    res.send('ROTA DE CADASTRO DE CATEGORIA!');
+
+    console.log(req.body);
+    let {nome_categoria} = req.body;//importante ter o mesmo nome da variavel e do campo
+   
+    modelCategoria.create(
+        //dados inserção
+        {nome_categoria}//Ele faz com que o campo do banco pegue os valores de nome_categoria e
+    ).then(
+        res.send('CATEGORIA CADASTRADA COM SUCESSO!')
+    );
+    
     // console.log('TESTE DE NODEMON');
 });
 
@@ -29,4 +40,4 @@ router.delete('/excluirCategoria', (req, res)=>{
     res.send('ROTA DE EXCLUSÃO DE CATEGORIA!');
 });
 
-module.exports = modelCategoria;
+module.exports = router;

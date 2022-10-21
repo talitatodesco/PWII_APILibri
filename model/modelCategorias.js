@@ -4,6 +4,7 @@ const Sequelize = require('sequelize');
 //IMPORTAÇÃO DO ARQUIVO DE CONEXÃO COM O BANCO DE DADOS
 const connection = require('../database/database');
 
+
 /*
 PARAMETROS DO MÉTODO DEFINE
 1 - NOME DA TABELA - STRING
@@ -17,16 +18,17 @@ const modelCategoria = connection.define(
     {
         cod_categoria:{
             type: Sequelize.INTEGER,
-            primaryKey: true,
-            autoIncrement:true
+            
         },
         nome_categoria:{
             type: Sequelize.STRING(100),
-            allowNull: false
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement:true
         }
     }
 );
 
-// modelCategoria.sync({force:true});
+//modelCategoria.sync({force:true});
 
 module.exports = modelCategoria;
