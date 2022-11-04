@@ -18,13 +18,12 @@ const modelCategoria = connection.define(
     {
         cod_categoria:{
             type: Sequelize.INTEGER,
-            
+            primaryKey: true,
+            autoIncrement:true
         },
         nome_categoria:{
             type: Sequelize.STRING(100),
             allowNull: false,
-            primaryKey: true,
-            autoIncrement:true
         }
     }
 );
