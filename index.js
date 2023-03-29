@@ -7,6 +7,9 @@ ATRAVÉS DA CONSTANTE app
 */
 const app = express();
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 app.use('/', routesCategoria);
 
 /** EXEMPLOS DE ROTA **/
@@ -25,6 +28,7 @@ PARAMETROS DO listem
 1 - PORTA LÓGICA (OBRIGATÓRIA)
 2 - CALLBACK (OPCIONAL)
 */
+
 app.listen(3000, ()=>{
     console.log('SERVIDOR RODANDO EM - http://localhost:3000');
 });
